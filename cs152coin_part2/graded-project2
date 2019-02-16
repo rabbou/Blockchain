@@ -1,0 +1,41 @@
+/*** correctness ***/
+
+- design of deanon struct              10/10
+- deanon_new                           2 / 2
+
+- deanon_preprocess
+ - can add addresses                   6 / 6 /* via add_address or some other function(s) */
+ - can add associations                6 / 6 /* via add_associations or some other function(s) */
+ - does add all addresses              4 / 6 /* even addresses that aren't transaction inputs */
+ - does add sufficient associations    6 / 6 /* not all associations have to be added for all clusters to be found */
+
+- get_cluster
+ - computes cluster correctly          10/12 -- except singleton clusters
+ - O(|v|+|e|) on first call            6 / 6
+ - O(1) after first call               6 / 6
+
+- cluster_size                         5 / 5
+- cluster_balance                      5 / 5
+
+- cluster_new                          3 / 3
+- cluster_free                         3 / 3
+                                       
+- free of memory leaks                 5 / 5
+                                       
+/*** style ***/                        
+                                       
+- code layout                          3 / 3
+- identifiers are well named           3 / 3
+                                       
+- functions are well designed          3 / 3
+- code is well factored                4 / 4  /* e.g., free of copied-and-pasted blocks of code */
+                                       
+- code is written clearly              3 / 3  /* i.e., avoid Byzantine logic */
+- code is efficient                    3 / 3  /* i.e., avoid blatant inefficiencies */
+
+_total-score_                          96/100
+
+/* graded by Mihai Andreescu */
+
+NOTE: you did not add all addresses to the hash map, so if an address that's not a
+      transaction input is queried, your program segfaults. Otherwise OK.

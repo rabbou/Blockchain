@@ -1,0 +1,50 @@
+/*** correctness ***/
+
+addr_bal data design 7 / 7
+
+addr_bal_new     2 / 2  
+addr_bal_free    2 / 2
+
+get_balance      6 / 6
+set_balance      6 / 6
+
+dbl_spends data design  4 / 4
+
+dbl_spends_new   2 / 2
+dbl_spends_free  2 / 2
+
+add_dbl_spend    3 / 3
+dbl_spends_show  3 / 3
+
+parse_trans      7 / 7
+parse_block      7 / 7
+parse_blockchain 7 / 7
+
+dep_wd_free      2 / 2
+trans_free       2 / 2
+
+block_free       2 / 2
+blockchain_free  2 / 2
+
+compute_stats  
+- number of blocks       2 / 2
+- number of transactions 2 / 2
+- average tr. value      2 / 2
+- addr/bal               6 / 6
+- double spends          4 / 4
+
+/*** style ***/
+
+/* code layout                        3 / 3 */
+/* identifiers are well named         3 / 3 */
+
+/* functions are well designed        3 / 3 */ 
+/* code is well factored              3 / 3 */ /* e.g., free of copied-and-pasted blocks of code */
+
+/* code is written clearly            3 / 3 */ /* i.e., avoid Byzantine logic */
+/* code is efficient                  3 / 3 */ /* i.e., avoid blatant inefficiencies */
+
+
+/* _total-score_                      100/100 */
+
+/* graded by Mihai Andreescu */
